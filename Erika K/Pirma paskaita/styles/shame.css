@@ -1,0 +1,11 @@
+section{
+    display: inline-block;
+    width: 100%;
+    
+}
+
+
+section {
+    padding-top: var(--navbar-height);
+    margin-top: calc(var(--navbar-height) * -1);
+}
