@@ -1,0 +1,29 @@
+@font-face{
+    font-family: 'absolute';
+    src: url('../fonts/absolute/absolute.otf')
+}
+
+@font-face{
+    font-family: 'absolute';
+    src: url('../fonts/absolute/absolute.otf');
+    font-style: italic;
+}
+
+
+@font-face{
+    font-family: 'locareBrush';
+    src: url('../fonts/locareBrush/locareBrush.ttf')
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--font-fancy);
+    margin: 0.25rem, 0;
+}
+
+.text-primary{
+color: var(--color-primary);
+}
+
+.text-secondary{
+color: var(--color-secondary);
+}

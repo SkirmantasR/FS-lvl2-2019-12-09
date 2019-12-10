@@ -1,0 +1,17 @@
+:root {
+    --black: #55d6aa;
+    --black-transparent: rgb(21, 21, 21, 0.935);
+    --navbar-height: calc(64px + 1rem);
+    --white: #000f01;
+    --grey-1: #08140b;
+    --font-simple: 'Geo Sans';
+    --font-fancy: blacklisted;
+    --color-primary: #052407;
+    --color-primary-darken: #093f0d;
+    --color-secondary: #557518;
+    --color-accent: #165b33;
+    --color-accent-darken: #0f3f23;
+    --font-size: 20px;
+    --display-width-xl: 1140px;
+  }
+

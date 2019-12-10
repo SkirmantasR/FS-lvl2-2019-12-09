@@ -1,0 +1,24 @@
+footer {
+    background: black;
+    color: var(--color-white);
+    padding: 2rem 0;
+}
+
+
+
+
+.footer__section{
+width: calc((100% - 2rem) / 3);
+float: left;
+
+}
+
+.footer__section:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.footer__section:not(:first-of-type){
+    margin-left: 1rem;
+}

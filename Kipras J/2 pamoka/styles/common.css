@@ -1,0 +1,57 @@
+
+
+
+.container {
+	width: 1368px;
+    margin: 0 auto;
+    
+}
+
+.btn {
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.btn:hover{
+    color: var(--grey-1)
+}
+
+
+
+
+.btn--secondary{
+    background: var(--color-secondary);
+
+}
+
+.btn--accent{
+    background: var(--color-accent);
+
+}
+
+
+.btn--primary {
+    background-image: linear-gradient(to bottom,  var(--color-primary), var(--color-primary-darken));
+}
+
+.btn--primary:hover{
+
+    background-image: linear-gradient(to top,  var(--color-primary), var(--color-primary-darken));
+}
+.btn--secondary {
+    background-image: linear-gradient(to bottom,  var(--color-secondary), var(--color-secondary-darken));
+}
+
+.btn--secondary:hover{
+
+    background-image: linear-gradient(to top,  var(--color-secondary), var(--color-secondary-darken));
+}
+.btn--secondary {
+    background-image: linear-gradient(to bottom,  var(--color-secondary), var(--color-secondary-darken));
+}
+
+.btn--accent:hover{
+
+    background-image: linear-gradient(to top,  var(--color-accent), var(--color-accent-darken));
+}
