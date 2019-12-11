@@ -1,0 +1,20 @@
+:root {
+    --black: #040613;
+    --black-transparent: #040613ee;
+    --display-width-xl: 1140px;
+    --font-simple: 'Geo Sans';
+    --font-fancy: 'Winter Sans';
+    --color-primary: #a2260c;
+    --color-primary-darken: #8b210b;
+    --color-secondary: #efaf4f;
+    --color-secondary-darken: #da9f48;
+    --color-accent: #1b152c;
+    --color-accent-darken: #140f20;
+    --font-size: 20px;
+    --grey-1: #c4c4c4;
+    --navbar-height: calc(64px + 1rem);
+    --white: #fcfcfc;
+    --color-social-fb: #4267b2;
+    --color-social-fb-darken: #4267b2;
+}
+

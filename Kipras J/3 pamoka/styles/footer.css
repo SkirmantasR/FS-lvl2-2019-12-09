@@ -1,0 +1,160 @@
+.footer{
+    background: var(--black);
+    color: var(--white);
+    padding: 2rem 0;
+}
+
+.footer__section {
+    width: calc((100% - 2rem) / 3);
+    float: left;
+    height: 312px;
+}
+
+.footer__section-header{
+    margin-bottom: 1rem;
+}
+
+.footer>.container:after{
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.footer__section:not(:first-of-type) {
+    margin-left: 1rem;
+}
+
+.footer__blog-links-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer__blog-links-container>a{
+    width: calc((100% - 1rem) / 3);
+    height: 120px;
+    margin-bottom: .5rem;
+    overflow: hidden;
+}
+.footer__blog-links-container>a:hover{
+    box-shadow: 0 0 2px 1px var(--color-primary);
+}
+
+.footer__blog-links-container>a:hover > img{
+    transform: scale(1.2);
+}
+
+.footer__blog-img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+transition: all .6s ease-in-out;
+}
+
+.footer-items{
+    width: 25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.main-h3{
+    margin: 10px 0;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+.footer-ul{
+    list-style: none;
+    color: var(--white);
+    font-size: 15px;
+    letter-spacing: 0.5px;
+
+}
+
+.footer-ul a{
+    text-decoration: none;
+    outline: none;
+    color: var(--white);
+    transition: 0.3s;
+    font-size: 17px;
+    
+}
+
+.footer-ul a:hover {
+    color: var(--color-accent);
+}
+
+.footer-ul li{
+    margin: 10px 0;
+    height: 25px;
+}
+
+.footer-ul li i{
+    margin-right: 20px;
+}
+
+.footer-bottom{
+    padding: 10px;
+    background: #002916;
+    color: var(--white);
+    font-size: 12px;
+    text-align: center;
+} 
+
+
+
+.footer__contact-line {
+    margin-bottom: .5rem;
+    margin-left: 2rem;
+}
+
+.footer__contact-line:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.footer__contact-line>* {
+    float: left;
+}
+
+.footer__contact-line>span{
+    vertical-align: top;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+}
+
+.icon {
+    background: blue;
+    height: 30px;
+    width: 30px;
+    margin-right: 1rem;
+}
+
+.icon:hover{
+    opacity: 0.9;;
+}
+
+.icon>img{
+    margin: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.social-icon--fb {
+    background: var(--color-social-fb);
+}
+
+.social-icon--yt>img {
+    width: 46px;
+    height: 46px;
+    margin: 0;
+}
+
+.social-icon--in {
+    background: var(--color-social-in);
+}

@@ -1,0 +1,44 @@
+.navbar {
+    background: var(--black-transparent);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.logo-container {
+    float: left;
+    padding: .5rem 0;
+}
+
+.logo-container>img {
+    float: left;
+}
+
+.nav-header {
+    float: right;
+}
+
+.menu-links {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.menu-link {
+    display: inline-block;
+}
+
+.menu-link>a {
+    color: var(--white);
+    display: inline-block;
+    height: var(--navbar-height);
+    line-height: calc(var(--navbar-height) - 2rem);
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+}
+
+.menu-link>a:hover {
+    color: var(--grey-1);
+}

@@ -1,0 +1,48 @@
+.container {
+    margin: auto;
+    width: var(--display-width-xl);
+}
+
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.btn {
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.btn:hover {
+    color: var(--grey-1);
+}
+
+.btn--primary {
+    background-image: linear-gradient(to bottom, var(--color-primary), var(--color-primary-darken));
+}
+
+.btn--primary:hover {
+    background-image: linear-gradient(to top, var(--color-primary), var(--color-primary-darken));
+}
+
+.btn--secondary {
+    background-image: linear-gradient(to bottom, var(--color-secondary), var(--color-secondary-darken));
+}
+
+.btn--secondary:hover {
+    background-image: linear-gradient(to top, var(--color-secondary), var(--color-secondary-darken));
+}
+
+.btn--accent {
+    background-image: linear-gradient(to bottom, var(--color-accent), var(--color-accent-darken));
+}
+
+.btn--accent:hover {
+    background-image: linear-gradient(to top, var(--color-accent), var(--color-accent-darken));
+}
+
+.pos-rel{
+    position: relative;
+}
