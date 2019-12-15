@@ -1,14 +1,3 @@
-.container {
-    margin: auto;
-    width: var(--display-width-xl);
-}
-.container--wide{
-    width: var(--display-width-xl-wide);
-}
-.container--full{
-    padding: 0 1rem;
-    width: initial;
-}
 .clearfix:after {
     clear: both;
     content: '';
@@ -16,6 +5,7 @@
 }
 
 .btn {
+    display: inline-block;
     padding: 1rem;
     text-decoration: none;
     color: var(--white);
@@ -48,6 +38,23 @@
 .btn--accent:hover {
     background-image: linear-gradient(to top, var(--color-accent), var(--color-accent-darken));
 }
+
 .pos-rel{
     position: relative;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex__self-align-start{
+    align-self: flex-start;
+}
+
+.flex__self-align-center{
+    align-self: center;
+}
+
+.flex__self-align-end{
+    align-self: flex-end;
 }

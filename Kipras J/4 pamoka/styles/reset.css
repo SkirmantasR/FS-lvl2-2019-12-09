@@ -1,0 +1,23 @@
+html {
+    background: var(--white);
+    color: var(--black);
+    font-family: var(--font-simple);
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+  }
+  
+  *,*:before,*:after{
+      box-sizing: border-box;
+  }
+  
+  body {
+      margin: 0;
+      /* background: #222; */
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 800;
+  }
+
+.sec-container{
+    margin: auto;
+    width: var(--display-width-xl);
+}
