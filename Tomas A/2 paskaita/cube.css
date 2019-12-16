@@ -29,6 +29,16 @@
 	 transform-style: preserve-3d;
 	 transform: rotateX(5deg) rotateY(-5deg);
 }
+._3dbox-1 {
+	display: inline-block;
+	transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	text-align: middle;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transform: rotateX(5deg) rotateY(-5deg);
+}
  ._3dface {
 	 overflow: hidden;
 	 position: absolute;
@@ -112,16 +122,19 @@
 	width: 300px;
 	height: 300px;
 	transform: translate3d(0, 0, 150px);
+	background: var( --color-accent);
 }
 ._3dface--top1 {
 	width: 300px;
 	height: 300px;
 	transform: rotateX(90deg) translate3d(0, 0, 150px);
+	background: var( --color-accent);
 }
-._3dface--bottom1 {
+._3dface--bottom1{
 	width: 300px;
 	height: 300px;
 	transform: rotateX(-90deg) translate3d(0, 0, 150px);
+	background: var( --color-accent);
 }
 ._3dface--left1 {
 	width: 300px;
@@ -129,6 +142,7 @@
 	left: 50%;
 	margin-left: -150px;
 	transform: rotateY(-90deg) translate3d(0, 0, 150px);
+	background: var( --color-accent);
 }
 ._3dface--right1 {
 	width: 300px;
@@ -136,18 +150,20 @@
 	left: 50%;
 	margin-left: -150px;
 	transform: rotateY(90deg) translate3d(0, 0, 150px);
+	background: var( --color-accent);
 }
 ._3dface--back1 {
 	width: 300px;
 	height: 300px;
 	transform: rotateY(180deg) translate3d(0, 0, 150px);
+	background: var( --color-accent);
 }
-#radio-bottom1:checked ~ .space3d ._3dbox {
+#radio-bottom1:checked ~ .space3d ._3dbox-1 {
 	transform: rotateX(90deg);
 }
-#radio-top1:checked ~ .space3d ._3dbox {
+#radio-top1:checked ~ .space3d ._3dbox-1 {
 	transform: rotateX(-90deg);
 }
-#radio-back1:checked ~ .space3d ._3dbox {
+#radio-back1:checked ~ .space3d ._3dbox-1 {
 	transform: rotateY(180deg);
 }

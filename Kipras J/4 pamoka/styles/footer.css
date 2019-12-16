@@ -100,7 +100,6 @@
 }
 
 .icon {
-    background: blue;
     height: 30px;
     width: 30px;
     margin-right: 1rem;
@@ -157,8 +156,4 @@
 
 .social-icon--in {
     background: var(--color-social-in);
-}
-
-.social-icon--tw {
-    background: var(--color-social-tw);
 }

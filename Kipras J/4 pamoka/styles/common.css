@@ -2,21 +2,10 @@
 
 
 .container {
-    display: block;
-    width: var(--display-width-xl);
+	width: 1368px;
     margin: 0 auto;
     
 }
-
-.container--wide{
-    width: var(--display-width-xl-wide);
-}
-
-.container--full{
-    padding: 0 0rem;
-    width: initial;
-}
-
 
 .btn {
     padding: 1rem;
