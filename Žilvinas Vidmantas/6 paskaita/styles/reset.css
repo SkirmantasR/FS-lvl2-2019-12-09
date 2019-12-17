@@ -1,0 +1,22 @@
+html {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-simple);
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+    font-weight: 500;
+    letter-spacing: .15rem;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.js-prevent-transition *{
+    transition: none !important;
+}
+

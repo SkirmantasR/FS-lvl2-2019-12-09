@@ -1,0 +1,17 @@
+:root {
+    --black: #07080e;
+    --display-width-xl: 900px;
+    --display-width-xl-wide: 1340px;
+    --font-simple: 'Geo Sans';
+    --font-fancy: 'Winter Sans';
+    --color-primary: #b62f14;
+    --color-primary-darken: #9c2a13;
+    --color-secondary: #ffc061;
+    --color-secondary-darken: #ecaf54;
+    --color-accent: #0c0520;
+    --color-accent-transparent: #0f0624d8;
+    --font-size: 20px;
+    --grey-1: #c4c4c4;
+    --navbar-height: calc(64px + 1rem);
+    --white: #fafafa;
+}

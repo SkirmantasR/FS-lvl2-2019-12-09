@@ -1,0 +1,22 @@
+:root {
+    --black: #55d6aa;
+    --black-transparent: rgb(21, 21, 21, 0.935);
+    --navbar-height: calc(64px + 1rem);
+    --white: #f0f7f0;
+    --grey-1: #08140b;
+    --font-simple: 'Geo Sans';
+    --font-fancy: blacklisted;
+    --font-christmas: Christmas;
+    --font-christmasTwo: ChristmasTwo;
+    --color-primary: #0e4111;
+    --color-primary-darken: #093f0d;
+    --color-secondary: #557518;
+    --color-accent: #165b33;
+    --color-accent-darken: #0f3f23;
+    --font-size: 20px;
+    --display-width-xl: 1140px;
+    --color-social-fb: #4267b2;
+    --color-social-yt: #ff0000;
+    --color-social-in: #df0041;
+}
+  

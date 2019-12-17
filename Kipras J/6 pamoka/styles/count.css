@@ -1,0 +1,50 @@
+.count-container{
+    background-image: url(../images/birds.jpg);
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.count-container h1{
+    color: red;
+    text-shadow: 1px 2px black;
+    text-transform: uppercase;
+    font-size: 60px;
+    margin: 20px;
+    letter-spacing: 10px;
+}
+
+.count-container p{
+    margin: 0;
+    font-size: 60px;
+    color: rgb(161, 2, 2);
+    text-shadow: 1px 2px black;
+    font-weight: 500;
+    padding: 5px;
+    font-family:  var(--font-christmas);
+
+}
+
+.count{
+    margin: 40px 0;
+    
+}
+
+.countd{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 2px solid;
+    margin: 0 30px;
+    font-size: 12px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-shadow: 1px 1px black;
+}
+
+.countd span{
+    display: block;
+    font-size: 26px;
+    margin-top: 14px;
+}

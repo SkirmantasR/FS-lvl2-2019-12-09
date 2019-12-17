@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Geo Sans';
+    src: url('../fonts/geo\ sans/GeosansLight.ttf');
+  }
+
+  @font-face {
+    font-family: 'Geo Sans';
+    src: url('../fonts/geo\ sans/GeosansLight-Oblique.ttf');
+  }
+
+  @font-face {
+    font-family: 'blacklisted';
+    src: url(../fonts/blacklisted/Blacklisted.ttf);
+  }
+
+  @font-face {
+    font-family: 'Christmas';
+    src: url('../fonts/christmas/MerryChristmasFlake.ttf');
+  }
+
+  @font-face {
+    font-family: 'Christmas';
+    src: url('../fonts/christmas/MerryChristmasStar.ttf');
+  }
+
+  @font-face {
+    font-family: 'ChristmasTwo';
+    src: url('../fonts/christmasTwo/Christmas\ Snow.ttf');
+  }
+
+
+  h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-fancy);
+      margin: .25rem 0;
+  }
+
+  .text-primary{
+
+    color: var(--color-primary);
+  }
+
+  .text-secondary{
+
+color: var(--color-secondary);
+  }
