@@ -30,14 +30,16 @@
     border: 1px solid var(--black);
     overflow: hidden;
     color: var(--white);
-    left: 0;
-    opacity: 1;
-    transition: left .6s ease-in-out, opacity .6s ease-in-out .3s; 
-}
-
-.card.hide{
     left: 800px;
     opacity: 0;
+}
+
+.card.show {
+    animation-name: pizeliuot;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 .card__background>* {
@@ -50,13 +52,13 @@
     z-index: 0;
 }
 
-.card__content{
+.card__content {
     position: relative;
     padding: 1rem;
     z-index: 1;
 }
 
-.card__footer{
+.card__footer {
     position: absolute;
     left: 1rem;
     right: 1rem;

@@ -21,6 +21,7 @@
     overflow: hidden;
 }
 
+
 .card {
     position: relative;
     width: 500px;
@@ -32,13 +33,16 @@
     color: var(--white);
     left: 0;
     opacity: 1;
-    transition: left .6s ease-in-out, opacity .6s ease-in-out .3s; 
 }
 
 .card.hide{
-    left: 800px;
-    opacity: 0;
+    animation-play-state: paused;
+    animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
+
 
 .card__background>* {
     position: absolute;

@@ -1,0 +1,17 @@
+@keyframes wavy {
+ 
+  25% {
+    left: 800px; top: 0px;
+  }
+
+  50% {
+    left: 600px; top: 0px;
+  }
+  75% {
+    left: 800px; top: 0px;
+  }
+  100% {
+    left: 700px; top: 0px;
+  }
+}
+

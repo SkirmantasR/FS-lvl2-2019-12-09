@@ -1,0 +1,39 @@
+#contacts{
+    overflow: hidden;
+}
+
+.contacts__container{
+    display:flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.employee {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    transform: scale(1);
+    transition: all .6s ease-in, opacity 1.2s ease-in-out;
+}
+
+.employee.hide{
+    top: 200px;
+    transform: scale(0.5);
+    opacity: 0;
+}
+
+.employee_img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.employee__fullname{
+    margin: .7rem 0;
+    font-weight: 700
+}
+
+.employee__role{
+    font-weight: 400;
+}

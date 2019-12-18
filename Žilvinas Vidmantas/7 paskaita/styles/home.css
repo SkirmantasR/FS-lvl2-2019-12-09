@@ -162,7 +162,7 @@
 .home__btn-container>.btn{
     opacity: 1;
     transform: scale(1);
-    transition: opacity .6s ease-in-out, transform .3s ease-in-out .3s;
+    transition: opacity .6s ease-in-out, transform .6s ease-in-out;
 }
 .home__btn-container>.btn.hide {
     transform: scale(0.1);

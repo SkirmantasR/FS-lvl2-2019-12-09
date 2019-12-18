@@ -3,7 +3,7 @@
 const animateTriggers = []; // Niekada nereikia naudoti
 
 // Functions
-function animateMultipleElements(items, apearanceType, delay) {
+function animateMultipleElements(items, className, add, apearanceType, delay) {
     let aprearanceSpeed;
     switch (apearanceType) {
         case 'linear': aprearanceSpeed = x => x * 300; break;
@@ -15,7 +15,8 @@ function animateMultipleElements(items, apearanceType, delay) {
     items.forEach((item, i) => {
         setTimeout(() => {
             // !!!!!!!!!!!!!!!!!!!!!!!!! - besrolinant jau reikejo hide'int bet vis tiek parodomas
-            item.classList.remove('hide');
+            if (add) item.classList.add(className);
+            else item.classList.remove(className);
         }, delay + aprearanceSpeed(i));
     });
 }
@@ -49,11 +50,21 @@ function getOffsetTop(elem) {
  * @param {Boolean} toggle - ar per'animuoti elementus
  */
 
-function animateOnTrigger(triggerElement, elementsToAnimate, animationType = 'none', toggle = false, delay = 0) {
+function animateOnTrigger(
+    triggerElement,
+    elementsToAnimate,
+    className,
+    add = true,
+    animationType = 'none',
+    toggle = false,
+    delay = 0) {
     animateTriggers.push({
-        animate: () => animateMultipleElements(elementsToAnimate, animationType, delay),
+        animate: () => animateMultipleElements(elementsToAnimate, className, add, animationType, delay),
         getOffset: () => getOffsetTop(triggerElement),
-        hide: () => elementsToAnimate.forEach(el => el.classList.add('hide')),
+        hide: () => elementsToAnimate.forEach((el) => {
+            if (add) el.classList.remove(className);
+            else el.classList.add(className);
+        }),
         elHeight: () => triggerElement.offsetHeight,
         toggleAnimation: toggle
     });
