@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Geo Sans';
+    src: url('../fonts/geo\ sans/GeosansLight.ttf');
+}
+
+@font-face {
+    font-family: 'Geo Sans';
+    src: url('../fonts/geo\ sans/GeosansLight-Oblique.ttf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Winter Sans';
+    src: url('../fonts/winter\ sans/Winter_Sans.otf');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-fancy);
+    margin: .25rem 0;
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.section-header{
+    height: 5rem;
+    line-height: 5rem;
+    margin: 0 0 0 2rem;
+    font-size: 2rem;
+}

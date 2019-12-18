@@ -1,0 +1,65 @@
+#blog {
+    position: relative
+}
+
+#blog:after {
+    background-image: linear-gradient(to left bottom, var(--color-accent), var(--black));
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    content: '';
+    z-index: -1;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    height: 700px;
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px 2px var(--black);
+    border: 1px solid var(--black);
+    overflow: hidden;
+    color: var(--white);
+    left: 0;
+    opacity: 1;
+    transition: left .6s ease-in-out, opacity .6s ease-in-out .3s; 
+}
+
+.card.hide{
+    left: 800px;
+    opacity: 0;
+}
+
+.card__background>* {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+    z-index: 0;
+}
+
+.card__content{
+    position: relative;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.card__footer{
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    text-align: center;
+}

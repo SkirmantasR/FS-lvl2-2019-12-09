@@ -1,13 +1,14 @@
 // Elements
-const cards = document.querySelectorAll('.card');
-const animateTriggers = [];
+
+const animateTriggers = []; // Niekada nereikia naudoti
 
 // Functions
-function animateMultipleElements(items, apearanceType) {
+function animateMultipleElements(items, apearanceType, delay) {
     let aprearanceSpeed;
     switch (apearanceType) {
         case 'linear': aprearanceSpeed = x => x * 300; break;
         case 'exponential': aprearanceSpeed = x => x ** 2 * 100; break;
+        case 'slow exponential': aprearanceSpeed = x => 500 * x ** 2; break;
         case 'mix': aprearanceSpeed = x => 50 * x ** 2 + x * 150; break;
         default: aprearanceSpeed = () => 0
     }
@@ -15,7 +16,7 @@ function animateMultipleElements(items, apearanceType) {
         setTimeout(() => {
             // !!!!!!!!!!!!!!!!!!!!!!!!! - besrolinant jau reikejo hide'int bet vis tiek parodomas
             item.classList.remove('hide');
-        }, aprearanceSpeed(i));
+        }, delay + aprearanceSpeed(i));
     });
 }
 
@@ -24,9 +25,10 @@ function handlePageScroll() {
     let top = window.scrollY;
 
     animateTriggers.forEach(anTrig => {
-        if (top > anTrig.getOffset() - viewportHeight && top < anTrig.getOffset()) {
-            anTrig.animate();
-        } else if (anTrig.toggleAnimation) anTrig.hide();
+        let elementTopInViewport = top >= anTrig.getOffset() - viewportHeight;
+        let elementBotInViewport = top <= anTrig.getOffset() + anTrig.elHeight();
+        if (elementTopInViewport && elementBotInViewport) anTrig.animate();
+        else if (anTrig.toggleAnimation) anTrig.hide();
     });
 }
 
@@ -47,18 +49,21 @@ function getOffsetTop(elem) {
  * @param {Boolean} toggle - ar per'animuoti elementus
  */
 
-function animateOnTrigger(triggerElement, elementsToAnimate, animationType, toggle = false) {
+function animateOnTrigger(triggerElement, elementsToAnimate, animationType = 'none', toggle = false, delay = 0) {
     animateTriggers.push({
-        animate: () => animateMultipleElements(elementsToAnimate, animationType),
+        animate: () => animateMultipleElements(elementsToAnimate, animationType, delay),
         getOffset: () => getOffsetTop(triggerElement),
         hide: () => elementsToAnimate.forEach(el => el.classList.add('hide')),
+        elHeight: () => triggerElement.offsetHeight,
         toggleAnimation: toggle
     });
 }
+
 
 // Event Listeners
 window.addEventListener('scroll', handlePageScroll);
 
 // Initial commands
-animateOnTrigger(cards[2], cards, 'linear', true);
-handlePageScroll();
+setTimeout(() => {
+    handlePageScroll();
+}, 50);

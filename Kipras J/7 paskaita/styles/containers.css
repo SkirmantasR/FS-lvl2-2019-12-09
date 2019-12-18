@@ -1,0 +1,19 @@
+.container {
+    display: block;
+    margin: auto;
+    width: var(--display-width-xl);
+}
+
+section>.container{
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.container--wide {
+    width: var(--display-width-xl-wide);
+}
+
+.container--full {
+    padding: 0 1rem;
+    width: initial;
+}
