@@ -1,7 +1,7 @@
 // fetch - tai Promise'as kuris skirtas duomenis iš serverio gauti
 
 // Vienu metu pradedamos 2 asynchroninės užduotys
-const getTodos = fetch('hps://jsonplaceholder.typicode.com/todos');
+const getTodos = fetch('https://jsonplaceholder.typicode.com/todos');
 const getUsers = fetch('https://jsonplaceholder.typicode.com/users');
 
 // ----------------------------------- Pasileidžia kartu - Concurrent
