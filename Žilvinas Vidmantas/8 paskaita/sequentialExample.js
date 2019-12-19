@@ -1,6 +1,6 @@
 let darbaiPradeti = new Date();
 
-const nutinkuosiuSienas = (darbuotojuSkaicius) => {
+const nutinkuosiuSienas = (darbuotojuSkaicius = 1) => {
   return new Promise((res, rej) => {
     console.log('Pradėta tinkuot', new Date() - darbaiPradeti)
     setTimeout(() => {
