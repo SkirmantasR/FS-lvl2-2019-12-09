@@ -1,10 +1,10 @@
 // fetch - tai Promise'as kuris skirtas duomenis iš serverio gauti
 
 // Vienu metu pradedamos 2 asynchroninės užduotys
-const getTodos = fetch('https://jsonplaceholder.typicode.com/todos');
+const getTodos = fetch('hps://jsonplaceholder.typicode.com/todos');
 const getUsers = fetch('https://jsonplaceholder.typicode.com/users');
 
-// -----------------------------------
+// ----------------------------------- Pasileidžia kartu - Concurrent
 //                  \
 //                   \_____getTodos-><pending>
 //                   |
@@ -13,20 +13,23 @@ const getUsers = fetch('https://jsonplaceholder.typicode.com/users');
 //
 
 const getData = Promise.all([getTodos, getUsers]);
-
-// -----------------------
-//                  \
-//                   \_____getTodos-><pending>
-//                   |
-//                   |
-//                   |_____getUsers-><pending>
+// ---------------------
+//   \
+//    \_____getTodos-><pending>---<resolved1>_________
+//    |                                               \___getData____resolve([resolve1, resolve2] )
+//    |                                               /
+//    |_____getUsers-><pending>-----------<resolved2>
 //
 getData
-    .then( data =>{ 
-        console.log(data);
+    .then(responses => Promise.all([responses[0].json(), responses[1].json()]))
+    .then(data => {
+        let todos = data[0];
+        let users = data[1];
+        console.table(todos);
+        console.table(users);
     })
-    .catch((data)=>{
-        console.error('sss')
+    .catch((msg) => {
+        console.log(msg);
     })
 
-    console.log
+
