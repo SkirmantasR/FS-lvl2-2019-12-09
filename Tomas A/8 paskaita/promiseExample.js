@@ -1,19 +1,14 @@
-//
-
-
-
-
-let iPromiseYouMoreThan10 = new Promise((res, rej)=>{
+// Promise -
+let iPromiseYouMoreThan10 = new Promise((res, rej) => {
     setTimeout(() => {
-        let num = Math.floor(Math.random() * 20);
-        if(num > 10){
+        let num = Math.floor(Math.random() * 21);
+        if (num > 10) {
             res('I did as I said');
-        }else{
+        } else {
             rej('I lied');
         }
     }, 1000);
 });
-
 
 iPromiseYouMoreThan10
     .then((data) => {
