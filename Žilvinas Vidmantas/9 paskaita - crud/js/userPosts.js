@@ -1,6 +1,28 @@
 const userContainer = document.querySelector('.js-user');
-let userId = 4;
+const tableData = document.querySelector('.table>tbody');
+let userId = 5;
 
+function renderTableData(posts) {
+  $('.table').removeClass('d-none');
+  tableData.innerHTML = '';
+  posts.forEach(post => renderRow(post))
+}
+
+function renderRow(post) {
+  let row = document.createElement('tr');
+  row.innerHTML = `
+  <td><a href="./singlePost.html?post=${post.id}">${post.title}</a></td>
+  <td><p>${post.body}</p></td>`;
+  tableData.appendChild(row);
+}
+
+function displayNoPosts() {
+  $('.alert-warning').removeClass('fade');
+  $('.table').addClass('d-none');
+  setTimeout(() => {
+    $('.alert-warning').addClass('fade');
+  }, 5000);
+}
 
 function renderUser(user) {
   userContainer.innerHTML = `
@@ -16,7 +38,27 @@ function renderUser(user) {
     </div>`;
 }
 
+function noUserAlert() {
+
+}
+
 
 fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-  .then(res => res.json())
-  .then(renderUser);
+  .then(res => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(res => res.json())
+      .then(posts => {
+        let userPosts = posts.filter(post => post.userId === userId);
+        if (userPosts.length > 0) renderTableData(userPosts);
+        else displayNoPosts();
+      });
+    return res.json();
+  })
+  .then(renderUser)
+  .catch(err => {
+    $('.table').addClass('d-none');
+    $('.js-user>h2').addClass('d-none');
+  })
+
+
+
