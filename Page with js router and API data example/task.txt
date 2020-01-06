@@ -1,0 +1,79 @@
+Pražiūrėti ir jei neaišku apsidaryti šiuos video: || 4-10 valandos
+    Javascript programavimo įrankiai: || 2 - 4 valandos
+        Kintamųjų tipų konvertavimas - https://www.youtube.com/watch?v=VQLYiFqetZM
+        Kitmūjų atiminties tipai  - https://www.youtube.com/watch?v=9ooYYRLdg_g
+        Objektai - https://www.youtube.com/watch?v=4uVwGw317QM
+        Prototipai - https://www.youtube.com/watch?v=e1yBONtbTuA
+        Masyvai ir ciklai - https://www.youtube.com/watch?v=orAS-MBh5f4
+        scopes, let and var - https://www.youtube.com/watch?v=q8SHaDQdul0
+        Masyvo metodai - https://www.youtube.com/watch?v=R8rmfD9Y5-c
+        ES 6 class -https://www.youtube.com/watch?v=T-HGdc8L-7w
+        lambda vs functions and this - https://www.youtube.com/watch?v=mrYMzpbFz18
+
+        Panaudojimas / pratybos - https://www.youtube.com/watch?v=pGkSHeEZLMU
+                                - https://www.youtube.com/watch?v=F3GeM_KrGjI
+
+    Javacript document (puslpaio objektų(HTML elementų) medžio ) valdymas: || 2 - 6 valandos
+        https://www.youtube.com/watch?v=0ik6X4DJKCc&t=1971s 
+        https://www.youtube.com/watch?v=mPd2aJXCZ2g&t=671s
+        https://www.youtube.com/watch?v=wK2cBMcDTss&t=1643s
+        https://www.youtube.com/watch?v=i37KVt_IcXw&t=1011s
+
+        Panaudojimas / pratybos - https://www.youtube.com/watch?v=JaMCxVWtW58&list=PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX&index=6
+
+-------------------------------------------------------------------------------------------------------
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ NEPRIVALOMA ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+-------------------------------------------------------------------------------------------------------
+
+    Perskaityti šiuos straipsnius: || 30 min - 2 val
+        https://medium.com/better-programming/is-javascript-synchronous-or-asynchronous-what-the-hell-is-a-promise-7aa9dd8f3bfb
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
+        https://nikgrozev.com/2017/10/01/async-await/
+        https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9?source=post_page-----7aa9dd8f3bfb----------------------
+
+    Pailsėti. Bent 3 valandas - rekomenduojama dieną
+    Užduotis:
+        Sukurti aplikaciją, kurioje būtų:
+            Vartotojai: https://jsonplaceholder.typicode.com/users
+            Postai (sukurti vartotojų) :  https://jsonplaceholder.typicode.com/posts
+            Komentarai (sukurti vartojų konkretiems postams) : https://jsonplaceholder.typicode.com/comments
+        Rekomenduojama and lapo nuspiėšti objektų priklausomybes, pvz: 
+         _____________________        _____________________     
+        |        Post         |      |         User        |
+        |        .......      |      |        .......      |   
+        |        userId ----------------------> id         |
+        |        ........     |      |        ........     |   
+         _____________________        _____________________   
+        Parsitraukti reikiamus duomenis ir padaryti atskirus puslapius:
+
+            Vieno vartotojo postai:
+                HTML lentele atvaizduoti vieno vartotojo postai
+                Turi matytis autoriaus informacija
+
+            Visų vartotojų postai:
+                HTML lentele atvaizduoti visi postų pavadinimai su autoriais
+                Turi matytis autorių informacija
+                Padaryti, jog paspaudus lentelės stulpelio pavadinimą, duomenys rikiuotūsi pagal tą stulpelį
+
+            Vieno posto puslapis:
+                Postas ir jo info
+                Matosi posto autorius
+                Postui priskirti komentarai, šalia kurių matosi komentarų autoriai(vartotojai)
+
+-------------------------------------------------------------------------------------------------------
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ TIK SAVIŽUDŽIAMS ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+-------------------------------------------------------------------------------------------------------           
+
+            Bendras puslapis kuriame galite naviguoti:
+                Single page applications, tik idėja: https://dev.to/rishavs/making-a-single-page-app-in-ye-good-olde-js-es6-3eng
+                URL formatting: https://blog.bitscry.com/2018/08/17/getting-and-setting-url-parameters-with-javascript/
+                JS ECMA 5 router: https://medium.com/frontend-fun/js-vanilla-script-spa-1b29b43ea475
+                JS Vanilla Router: https://dev.to/kodnificent/how-to-build-a-router-with-vanilla-javascript-2a18
+                Padaryti veikiančią front end navigaciją, kur galima naviguoti ir matyti:
+                    Home page
+                    Visus postus
+                    Bet kurį vartotoją
+                    Bet kurį postą
+                    Vieno vartotojo postų lentelę
+                    Vieno vartotojo parašytus komentarus
+
