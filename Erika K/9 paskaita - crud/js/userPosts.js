@@ -48,6 +48,9 @@ function noUserAlert(){
 
 fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
   .then(res => {
+      if (res.status !== 200){
+          throw new Error('There is no such user:' + resp.status);
+      }
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then(res => res.json())
       .then(posts => {
@@ -55,7 +58,7 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
         if (userPosts.length > 0) renderTableData(userPosts);
         else displayNoPosts();
       });
-    res.json()
+    return res.json()
   })
   .then(renderUser)
   .catch(err => {

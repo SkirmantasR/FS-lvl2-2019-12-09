@@ -1,9 +1,12 @@
 const userContainer = document.querySelector('.js-user');
 const tableData = document.querySelector('.table>tbody');
-let userId = 5;
+let userId = 2;
 
 function renderTableData(posts) {
   $('.table').removeClass('d-none');
+  $('h2.my-4')
+    .html('Recent posts')
+    .removeClass('text-center');
   tableData.innerHTML = '';
   posts.forEach(post => renderRow(post))
 }
@@ -45,6 +48,9 @@ function noUserAlert() {
 
 fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
   .then(res => {
+    if (res.status !== 200) {
+      throw new Error('There is no such user: ' + res.status);
+    }
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then(res => res.json())
       .then(posts => {
@@ -55,9 +61,10 @@ fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
     return res.json();
   })
   .then(renderUser)
-  .catch(err => {
-    $('.table').addClass('d-none');
-    $('.js-user>h2').addClass('d-none');
+  .catch(() => {
+    $('h2.my-4')
+      .html('There is no such user')
+      .addClass('text-center');
   })
 
 
