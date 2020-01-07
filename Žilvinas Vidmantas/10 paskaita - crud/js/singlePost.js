@@ -1,4 +1,5 @@
 const postContainer = document.querySelector('.js-post');
+const commentsContainer = document.querySelector('.js-comments');
 
 let urlString = window.location.search; // ?post=15
 let index = urlString.indexOf('='); // 5
@@ -14,8 +15,18 @@ function renderPost(data) {
       <a class="user-email" href="mailto: ${data.user.email}">${data.user.email}</a>
       <a class="user-phone" href="tel: ${data.user.phone}">${data.user.phone}</a>
     </div>
-    <p class="post__body">${data.post.body}</p>
-    <hr>`;
+    <p class="post__body">${data.post.body}</p>`;
+}
+
+function renderComments(comments) {
+  commentsContainer.innerHTML = '';
+  comments.forEach(({ name, body }) => {
+    commentsContainer.innerHTML += `
+    <div class="comment">
+      <h4 class="comment__name">${name}</h4>
+      <p class="comment__body">${body}</p>
+    </div>`;
+  });
 }
 
 fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
@@ -23,5 +34,11 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
   .then((post) => {
     fetch(`https://jsonplaceholder.typicode.com/users/${post.userId}`)
       .then(res => res.json())
-      .then(user =>renderPost({ post, user }))
+      .then(user => renderPost({ post, user }))
+    fetch(`https://jsonplaceholder.typicode.com/comments`)
+      .then(res => res.json())
+      .then(comments => {
+        let userComments = comments.filter(comment => comment.postId === post.id);
+        renderComments(userComments);
+      })
   });

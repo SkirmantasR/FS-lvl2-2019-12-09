@@ -52,4 +52,24 @@
     margin: .5rem 0;
 }
 
+.comment {
+    background: rgb(68, 68, 68);
+    padding: 1rem;
+    box-shadow: 2px 2px 2px #999, -2px 0 2px #999;
+    margin-bottom: 1rem;
+}
+
+.comment__name::first-letter{
+    text-transform: uppercase;
+}
+
+
+.comment__body {
+    padding: 1rem;
+    background: #757575;
+    text-indent: 1.5rem;
+}
+.comment__body::first-letter{
+    text-transform: uppercase;
+}
 

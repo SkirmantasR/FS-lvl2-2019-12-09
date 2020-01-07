@@ -1,6 +1,11 @@
 const userContainer = document.querySelector('.js-user');
 const tableData = document.querySelector('.table>tbody');
-let userId = 2;
+
+let urlString = window.location.search; // ?post=15
+let index = urlString.indexOf('='); // 5
+let userId = Number(urlString.slice(index + 1)); 
+
+
 
 function renderTableData(posts) {
   $('.table').removeClass('d-none');
