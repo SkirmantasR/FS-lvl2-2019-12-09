@@ -16,13 +16,39 @@
     position: absolute;
     margin: auto;
     top: 320px;
-    
+    left: 0;
+    right: 0;
+    height: 80px;
+    line-height: 40px;
+    padding: 15px;
+    background: lightcyan;
+    text-align: center;
+    font-size: 1.75rem;
+    text-transform: capitalize;
 
 }
 
 .post__body{
-  
-    margin: 4rem auto;
-    text-index: 
+    display: block;
+    margin: 4rem 0 4rem 2rem;
+    width: 480px;
+
+    text-indent: 3.5rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    
+
 }
 
+.user-info{
+    margin: 2rem, 4re, 0, 0;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.user-name{
+    margin-bottom: .5rem;
+    font-size
+}
