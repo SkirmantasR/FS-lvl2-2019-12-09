@@ -1,4 +1,4 @@
-Pražiūrėti ir jei neaišku apsidaryti šiuos video: || 4-10 valandos
+﻿Pražiūrėti ir jei neaišku pasidaryti šiuos video: || 4-10 valandos
     Javascript programavimo įrankiai: || 2 - 4 valandos
         Kintamųjų tipų konvertavimas - https://www.youtube.com/watch?v=VQLYiFqetZM
         Kitmūjų atiminties tipai  - https://www.youtube.com/watch?v=9ooYYRLdg_g
