@@ -1,0 +1,27 @@
+.navbar {
+    background: #003;
+}
+
+.navbar a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 1.5rem;
+    height: 60px;
+    line-height: 60px;
+}
+
+.navbar a:not(:first-of-type) {
+    margin-left: 1rem;
+}
+
+.navbar a.active {
+    color: #bbf;
+}
+
+.navbar a.active:hover {
+    color: #77e;
+}
+
+.navbar a:hover {
+    color: #bbb;
+}
