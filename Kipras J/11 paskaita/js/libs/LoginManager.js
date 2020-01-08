@@ -16,7 +16,7 @@ class LoginManager {
     }
 
     register = (user, pass) => {
-
+        
     }
 
 }

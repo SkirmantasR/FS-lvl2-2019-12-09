@@ -1,9 +1,22 @@
-const formLogin = document.querySelector('.js-form-register');
+const formRegister = document.querySelector('.js-form-register');
 
 function handleRegister(event) {
-    event.preventDefault();
-    let formData = loginManager.formObjectFromform(formRegister);
-    console.log(formData);
+  event.preventDefault();
+  const formData = loginManager.formObjectFromform(formRegister);
+  const validate = new Validation(formData);
+  validate
+    .minLength('login', 3)
+    .maxLength('login', 16)
+    .uniqueLogin();
+  validate
+    .minLength('password', 5)
+    .maxLength('password', 32);
+  validate
+    .minLength('rep-password', 5)
+    .maxLength('rep-password', 32)
+    .equalPasswords();
+    
+  console.log(validate);
 }
 
-formLogin.addEventListener('submit', handleRegister);
+formRegister.addEventListener('submit', handleRegister);
