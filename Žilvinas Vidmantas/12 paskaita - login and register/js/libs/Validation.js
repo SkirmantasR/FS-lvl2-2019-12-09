@@ -53,7 +53,10 @@ class Validation {
         this.errors[key].forEach(msg => {
           errorField.innerHTML += `<div>${msg}</div>`;
         });
-        input.addEventListener('focus', this.removeErrors)
+        input.addEventListener('focus', () =>{
+          // Papildomus veiksmus
+          this.removeErrors();
+        })
       }
     }
   }

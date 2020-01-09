@@ -53,17 +53,16 @@ class Validation {
         this.errors[key].forEach(msg => {
           errorField.innerHTML += `<div>${msg}</div>`;
         });
-        input.addEventListener('keypress', this.removeErrors)
+        input.addEventListener('focus', this.removeErrors)
       }
     }
   }
 
   removeErrors(e){
-    console.log(e);
     e.target.classList.remove('is-invalid');
-    console.log(e.target.parentNode.querySelector('.invalid-feedback'));
-
-    e.target.removeEventListener('keypress', this.removeErrors);
+    e.target.parentNode.querySelector('.invalid-feedback').innerHTML = '';
+    e.target.removeEventListener('focus', this.removeErrors);
   }
 }
 
+ 
