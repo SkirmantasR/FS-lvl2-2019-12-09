@@ -33,3 +33,5 @@ const loginManager = new LoginManager();
 
 // Duomenų įdejimas į Naršyklės atmintį - localStorage
 // localStorage.setItem('lastUserId', JSON.stringify(0));
+// localStorage.setItem('lastUserId', JSON.stringify(0));
+// localStorage.setItem('users', JSON.stringify([]));

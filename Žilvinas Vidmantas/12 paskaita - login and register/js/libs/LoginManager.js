@@ -13,7 +13,7 @@ class LoginManager {
     });
     return formData;
   }
-
+  
   register = ({login, password}) => {
     let lastUserId = JSON.parse(localStorage.getItem('lastUserId'));
     let users = JSON.parse(localStorage.getItem('users'));
@@ -23,9 +23,8 @@ class LoginManager {
   }
 }
 
-
 const loginManager = new LoginManager();
 
 // Duomenų įdejimas į Naršyklės atmintį - localStorage
-localStorage.setItem('lastUserId', JSON.stringify(0));
-localStorage.setItem('users', JSON.stringify([]));
+// localStorage.setItem('lastUserId', JSON.stringify(0));
+// localStorage.setItem('users', JSON.stringify([]));

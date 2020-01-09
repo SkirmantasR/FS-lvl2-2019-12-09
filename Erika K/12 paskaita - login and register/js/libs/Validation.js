@@ -25,7 +25,7 @@ class Validation {
     const users = JSON.parse(localStorage.getItem('users'));
     const logins = users.map(user => user.login);
     let unique = !logins.includes(this.data.login);
-    if (!unique) this.errors['login'].push('Login in son unique');
+    if (!unique) this.errors['login'].push('Login in not unique');
     return this;
   }
 
@@ -37,19 +37,33 @@ class Validation {
     return this;
   }
 
-  hasErrors = () =>{
+  hasErrors = () => {
     for (let key in this.errors) {
-      if(this.errors[key].length > 0) return true;
+      if (this.errors[key].length > 0) return true;
     }
     return false;
   }
 
   printErrors = () => {
-
+    for (const key in this.errors) {
+      if(this.errors[key].length > 0){
+        let input = document.querySelector('#' + key);
+        let errorField = document.querySelector(`#${key}~.invalid-feedback`);
+        input.classList.add('is-invalid');
+        this.errors[key].forEach(msg => {
+          errorField.innerHTML += `<div>${msg}</div>`;
+        });
+        input.addEventListener('keypress', this.removeErrors);
+      }
+    }
   }
+
+removeErrors(e){
+ console.log(e);
+ e.target.classList.remove('is-invalid');
+ e.target.querySelector('~.invalid-feedback');
+ e.target.removeEventlistener('keypress', this.removeErrors);
 }
-// PAVYZDYS
-// localStorage.setItem('users', JSON.stringify([{
-//   login: 'Serbentautas',
-//   password: 'admin'
-// }]));
+}
+
+

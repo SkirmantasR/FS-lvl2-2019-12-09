@@ -29,7 +29,8 @@ class LoginManager {
 
 
 // IDEJIMAS  I LOCAL STORAGE
-localStorage.setItem('lastUserId', JSON.stringify(0));
-localStorage.setItem('users', JSON.stringify([]));
+// DUOMENU ISVALYMAS
+// localStorage.setItem('lastUserId', JSON.stringify(0));
+// localStorage.setItem('users', JSON.stringify([]));
 
   
