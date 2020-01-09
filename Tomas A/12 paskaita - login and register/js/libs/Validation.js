@@ -25,7 +25,7 @@ class Validation {
     const users = JSON.parse(localStorage.getItem('users'));
     const logins = users.map(user => user.login);
     let unique = !logins.includes(this.data.login);
-    if (!unique) this.errors['login'].push('Login in son unique');
+    if (!unique) this.errors['login'].push('Login is non unique');
     return this;
   }
 
@@ -48,3 +48,8 @@ class Validation {
 
   }
 }
+ //PAVYZDYS
+// localStorage.setItem('users', JSON.stringify([{
+//   login: 'Serbentautas',
+//   password: 'admin'
+// }]));

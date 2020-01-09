@@ -48,3 +48,8 @@ class Validation {
 
   }
 }
+// PAVYZDYS
+// localStorage.setItem('users', JSON.stringify([{
+//   login: 'Serbentautas',
+//   password: 'admin'
+// }]));

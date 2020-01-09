@@ -8,22 +8,19 @@ function handleRegister(event) {
     .minLength('login', 3)
     .maxLength('login', 16)
     .uniqueLogin();
-    validate
+  validate
     .minLength('password', 5)
-    .maxLength('password', 32)
-
-    validate
+    .maxLength('password', 32);
+  validate
     .minLength('rep-password', 5)
     .maxLength('rep-password', 32)
-    .equalPassowords();
+    .equalPasswords();
 
-    if(validate.hasErrors()){
-        validate.printErrors();
-        return;
-    }
-    loginManager.register(formData);
-
-  console.log(validate);
+  if(validate.hasErrors()){
+    validate.printErrors();
+    return;
+  }
+  loginManager.register(formData)
 }
 
 formRegister.addEventListener('submit', handleRegister);
