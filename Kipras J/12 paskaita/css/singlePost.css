@@ -1,0 +1,75 @@
+.posts {
+    position: relative;
+    padding-top: 500px;
+}
+
+.post_image{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.post_title {
+    position: absolute;
+    margin: auto;
+    top: 70px;
+    left: 0;
+    right: 0;
+    height: 80px;
+    line-height: 40px;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.75rem;
+    color: yellow;
+    text-shadow: 2px 2px #000;
+    text-transform: capitalize;
+}
+
+.post_text{
+    display: block;
+    margin: 4rem 0 4rem 1rem;
+    width: 450px;
+    text-indent: 3.5rem;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.user-info {
+    margin: 4rem 2rem 0 0;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.user-name {
+    margin-bottom: .5rem;
+    font-size: 1.25rem;
+}
+
+.user-email{
+    margin: .5rem 0;
+}
+
+.comment {
+    background: rgb(68, 68, 68);
+    padding: 1rem;
+    box-shadow: 2px 2px 2px #999, -2px 0 2px #999;
+    margin-bottom: 1rem;
+}
+
+.comment__name::first-letter{
+    text-transform: uppercase;
+}
+
+
+.comment__body {
+    padding: 1rem;
+    background: #757575;
+    text-indent: 1.5rem;
+}
+.comment__body::first-letter{
+    text-transform: uppercase;
+}
+
