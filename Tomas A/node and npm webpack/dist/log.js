@@ -1,6 +1,8 @@
 
     class  Logger{
-      constructor{input}    
+      constructor(input){
+            this,input = input;
+      }    
         function logError(msg){
             
         }

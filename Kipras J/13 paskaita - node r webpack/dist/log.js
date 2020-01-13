@@ -1,8 +1,8 @@
 class Logger{
     constructor(input){
-        this.input 
+        this.input = input;
     }
-}
+
 
 function logError(msgArr){
 
@@ -10,4 +10,5 @@ function logError(msgArr){
 
 function logAnswer(msgArr){
 
+}
 }
