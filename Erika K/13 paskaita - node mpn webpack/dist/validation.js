@@ -6,7 +6,7 @@ class Validation{
     }
 
     isNumber(){
-        if (this.name[input].isNan) {
+        if (this.name[input].isNaN()) {
             this.errors[key].push(`${input} is not a number`)
           }
       

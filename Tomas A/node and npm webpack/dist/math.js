@@ -9,7 +9,9 @@ function multiply(a,b){
 }
 function divide(a,b){
     if (b!=0){
-        
+        return a/b;
     }
-
+ else {
+     console.log('error, cannot divide by zero')
+ }
 }
