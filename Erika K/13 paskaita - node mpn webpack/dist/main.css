@@ -5,6 +5,7 @@
     min-height: 100vh;
     background: #222222;
     color: #638ace;
+    grid-gap: 2rem;
 }
 
 .grid__content {
@@ -12,13 +13,13 @@
     grid-row: 2 /3
 }
 
-.grid__log{
+.grid__log {
     grid-column: 3/ 4;
     grid-row: 2 / 3;
     background: #6383b37c;
 }
 
-.logo{
+.logo {
     width: 100px;
     height: 100px;
     margin: auto;
