@@ -2,28 +2,44 @@ class Validation{
     constructor (inputName, input){
         this.name = inputName;
         this.input = input;
-        this.errors = [];
+        this.errors = {};
+     
+
     }
 
-    isNumber(){
-        if (this.name[input].isNaN()) {
-            this.errors[key].push(`${input} is not a number`)
+    isNumber = () => {
+        if (this.input.isNaN()) {
+            this.errors.push(`${input} is not a number`)
           }
-      
-        return this;
+        else{
+            return this;
+        }
     }
 
-    lenght(min, max){
-
-
+    lenght = () => {
+        if (this.input.lenght == 0) {
+            this.errors.push(`${input} must be no more than 0 chars.`)
+        }
+        else{
         return this;
-    }
-
-    notEmpty(){
-        return this;
-    }
-
-    getErrors(){
-
     }
 }
+
+    notEmpty(){
+        if(this.input.lenght == ""){
+        this.errors.push(`Input must not be empty.`)
+        }
+        else{
+        return this;
+    }
+}
+
+    getErrors = () => {
+        for (let input in this.errors) {
+          if (this.errors[input].length > 0) return true;
+        }
+        return false;
+      }
+
+}
+
