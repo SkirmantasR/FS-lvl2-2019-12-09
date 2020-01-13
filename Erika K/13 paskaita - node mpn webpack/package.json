@@ -2,17 +2,15 @@
   "name": "webpack_tutorial",
   "version": "1.0.0",
   "description": "learning webpack",
-  "main": "main.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js"
+    "start": "webpack"
   },
   "author": "Me",
   "license": "ISC",
-  "dependencies": {
-    "bootstrap": "^4.4.1"
-  },
   "devDependencies": {
-    "webpack": "^4.41.5"
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
