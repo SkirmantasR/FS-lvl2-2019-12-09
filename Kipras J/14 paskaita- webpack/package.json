@@ -1,0 +1,16 @@
+{
+  "name": "webpack_tutorial",
+  "version": "1.0.0",
+  "description": "Learning webpack",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
