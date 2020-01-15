@@ -5,12 +5,14 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack"
+    "start": "webpack-dev-server --config webpack.config.js --open",
+    "build": "webpack --config webpack.config.js"
   },
   "author": "Me",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   }
 }

@@ -1,0 +1,37 @@
+.grid {
+  display: grid;
+  grid-template-columns: auto 700px 300px auto;
+  grid-template-rows: 100px auto 250px;
+  min-height: 100vh;
+  background: #222222;
+  color: #638ace;
+  grid-gap: 2rem;
+
+  &__content {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  &__log {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background: #638ace;
+  }
+}
+.grid__content {
+  grid-column: 2/ 3;
+  grid-row: 2 /3;
+}
+
+.grid__log {
+  grid-column: 3/ 4;
+  grid-row: 2 / 3;
+  background: #6383b37c;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  display: block;
+}
