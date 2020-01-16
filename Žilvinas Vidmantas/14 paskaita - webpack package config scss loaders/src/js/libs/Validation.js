@@ -4,7 +4,6 @@ class Validation {
     this.value = value;
     this.errors = [];
   }
-  
   isNumber() {
     if (isNaN(this.value)) this.errors.push(`${this.name}: value is not numerical.`);
     return this;
