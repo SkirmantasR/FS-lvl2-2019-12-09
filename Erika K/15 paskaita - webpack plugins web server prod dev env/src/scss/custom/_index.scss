@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+    grid-template-columns: auto 700px 300px auto;
+    grid-template-rows: 100px auto 250px;
+    min-height: 100vh;
+    background: $dark;
+    color: $primary;
+    grid-gap: 2rem;
+  
+    &__content {
+      grid-column: 2/ 3;
+      grid-row: 2 /3;
+    }
+  
+    &__log {
+      grid-column: 3/ 4;
+      grid-row: 2 / 3;
+      background: $primary-dark;
+    }
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: block;
+  }
+  
