@@ -1,0 +1,75 @@
+
+body {
+    background: url(juniperphoton-6KvcUtuk9WE-unsplash.jpg);
+    height: 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.container{
+    position: absolute;
+    right: 30px;
+    top: 100px;
+}
+.entry {
+    width: 265px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 2px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(41, 92, 168, 0.6);
+}
+.calc-container{
+    width: 300px;
+    background-color: rgba(19, 35, 70, 0.6);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 3px 3px black;
+}
+.numBut{
+    height: 59px;
+    width: 59px;
+    margin: 10px 4px;
+    background-color: rgba(66, 75, 122, 0.7);
+    border: none !important;
+}
+.mathBut{
+    height: 59px;
+    width: 59px;
+    margin: 10px 4px;
+    border: none !important;
+}
+.clearBut{
+    height: 59px;
+    width: 59px;
+    margin: 10px 4px;
+    background-color: rgba(122, 66, 66, 0.7);
+    border: none !important;
+}
+.otherBut{
+    height: 59px;
+    width: 59px;
+    margin: 10px 4px;
+    background-color: rgba(68, 122, 66, 0.7);
+    border: none !important;
+}
+.copyPasteBut{
+    height: 59px;
+    width: 59px;
+    margin: 10px 4px;
+    background-color: rgba(113, 122, 66, 0.7);
+    border: none !important;
+}
+.equalBut{
+    height: 59px;
+    width: 126px;
+    margin: 10px 4px;
+    background-color: rgba(81, 142, 151, 0.7);
+    border: none !important;
+}
+ 

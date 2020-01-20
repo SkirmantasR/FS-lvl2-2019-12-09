@@ -11,34 +11,37 @@
       crossorigin="anonymous"
      
     />
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css"/>
 
     <title>Skaičiuotuvas</title>
   </head>
   
   <body>
     
-    <div class="grid">
-    <div class="js-content grid__content">
+    <div class="calculator">
     <input type="text" name="answer" class="calculator-screen" value="0" disabled>
-    <input type="button" value=" 1 ">
-    <input type="button" value=" 2 ">
-    <input type="button" value=" 3 ">
-    <input type="button" value=" 4 ">
-    <input type="button" value=" 5 ">
-    <input type="button" value=" 6 ">
-    <input type="button" value=" 7 ">
-    <input type="button" value=" 8 ">
-    <input type="button" value=" 9 ">
-    <input type="button" value=" 0 ">
-    <input type="button" value=" + ">
-    <input type="button" value=" - ">
-    <input type="button" value=" * ">
-    <input type="button" value=" / ">
-    <input type="button" value=" . ">
-    <input type="button" value=" = ">
+    <div class="calculator-keys">
+      <input type="button"  value=" + ">
+      <input type="button" value=" - ">
+      <input type="button" value=" * ">
+      <input type="button" value=" / ">
+      <button class="num" data-num="0"> 0 </button>
+    <button class="num" data-num="1"> 1 </button>
+    <button class="num" data-num="2"> 2 </button>
+    <button class="num" data-num="3"> 3 </button>
+    <button class="num" data-num="4"> 4 </button>
+    <button class="num" data-num="5"> 5 </button>
+    <button class="num" data-num="6"> 6 </button>
+    <button class="num" data-num="7"> 7 </button>
+    <button class="num" data-num="8"> 8 </button>
+    <button class="num" data-num="9"> 9 </button>
+    <button class="num" data-num="9"> 10 </button>
+    <button  class="decimal" value=" . "> </button>
+    <button  class="equal-sign" value=" = ">  </button>
+    <button class="all-clear" value=" C "> </button>
 
-
+    </div>
+    </div>
     
 
 
@@ -75,5 +78,6 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script src=main.js></script>
   </body>
 </html>

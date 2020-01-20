@@ -1,6 +1,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  background-color: black;
 }
 
 *,
@@ -11,13 +12,52 @@ html {
   box-sizing: inherit;
 }
 
+.calculator {
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
 .calculator-screen {
+  display: grid;
   width: 100%;
-  height: 30px;
-  background-color: black;
+  height: 120px;
   text-align: right;
   padding-right: 20px;
   padding-left: 10px;
-  text-align: right;
+  background-color: black;
   color: white;
+  font-size: 5em;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 7px;
+  grid-column-gap: 7px;
+
+  background-color: black;
+  font-size: 5em;
+  padding: 5px;
+
+  border-radius: 2px;
+}
+
+.calculator-keys > * {
+  border-radius: 50px;
+  padding: 10px;
+  margin: 10px;
+  background-color: dimgray;
+  color: lightgrey;
+}
+
+.equal-sign {
+  grid-row-start: 2;
+  grid-column-start: 4;
+  grid-row-end: 6;
+  grid-column-end: 5;
+  background-color: orange;
 }
